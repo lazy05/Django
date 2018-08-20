@@ -1,0 +1,163 @@
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<ul class="nav nav-tabs" >
+  {% if request.session.user_name %}
+  <li role="presentation"><a>
+  欢迎您，{{ request.session.user_name }}
+  </a></li>
+  <li role="presentation" class="active"><a href="{% url 'loginout' %}">退出</a></li>
+  {% else %}
+  <li role="presentation"><a href="{% url 'login' %}">登录</a></li>
+  <li role="presentation"><a href="{% url 'registe' %}">注册</a></li>
+  {% endif %}
+</ul>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 11 %}" class="thumbnail">
+      <img src="{% static 'img/g.jpg' %}" alt="...">
+        <p align="center">当你决定出发,最难已经过去</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3" width="10px">
+    <a href="{% url 'detail' 12 %}" class="thumbnail">
+        <img src="{% static 'img/a.jpg' %}" alt="...">
+        <p align="center">放大自己的优点</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 13 %}" class="thumbnail">
+      <img src="{% static 'img/j.jpg' %}" alt="...">
+        <p align="center">还不算太糟</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 14 %}" class="thumbnail">
+      <img src="{% static 'img/d.jpg' %}" alt="...">
+        <p align="center">韭菜</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 15 %}" class="thumbnail">
+      <img src="{% static 'img/k.jpg' %}" alt="...">
+        <p align="center">每个小目标都能通往大梦想</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 16 %}" class="thumbnail">
+      <img src="{% static 'img/e.jpg' %}" alt="...">
+        <p align="center">年轻人混日子是没有未来的！</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 17 %}" class="thumbnail">
+      <img src="{% static 'img/h.jpg' %}" alt="...">
+        <p align="center">宁缺毋滥</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 18 %}" class="thumbnail">
+      <img src="{% static 'img/p.jpg' %}" alt="...">
+        <p align="center">势均力敌,才是友情最好的模样</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 19 %}" class="thumbnail">
+      <img src="{% static 'img/r.jpg' %}" alt="...">
+        <p align="center">双向看人看自己</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 20 %}" class="thumbnail">
+      <img src="{% static 'img/m.jpg' %}" alt="...">
+        <p align="center">我曾在你看不见的地方偷偷爱过你</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 21 %}" class="thumbnail">
+      <img src="{% static 'img/n.jpg' %}" alt="...">
+        <p align="center">幸福就像穿鞋子</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 22 %}" class="thumbnail">
+      <img src="{% static 'img/f.jpg' %}" alt="...">
+        <p align="center">学会调节自己的情绪</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 23 %}" class="thumbnail">
+      <img src="{% static 'img/s.jpg' %}" alt="...">
+        <p align="center">一喜一忧是生活,一起一落是人生</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 24 %}" class="thumbnail">
+      <img src="{% static 'img/o.jpg' %}" alt="...">
+        <p align="center">遇见的都是天意,拥有的都是幸运</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 25 %}" class="thumbnail">
+      <img src="{% static 'img/q.jpg' %}" alt="...">
+        <p align="center">做一颗经受磨难的种子</p>
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 26 %}" class="thumbnail">
+      <img src="{% static 'img/u.jpg' %}" alt="...">
+        <p align="center">人生要学会留白,才能活得安然洒脱</p>
+    </a>
+  </div>
+</div>
+<div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 27 %}" class="thumbnail">
+      <img src="{% static 'img/l.jpg' %}" alt="...">
+        <p align="center">你对别人越好,别人越不在意</p>
+    </a>
+  </div>
+</div><div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 28 %}" class="thumbnail">
+      <img src="{% static 'img/i.jpg' %}" alt="...">
+        <p align="center">通往内心的跑步</p>
+    </a>
+  </div>
+</div><div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 29 %}" class="thumbnail">
+      <img src="{% static 'img/b.jpg' %}" alt="...">
+        <p align="center">一人,一路,一辈子</p>
+    </a>
+  </div>
+</div><div class="col-xs-6 col-md-3">
+    <a href="{% url 'detail' 30 %}" class="thumbnail">
+      <img src="{% static 'img/t.jpg' %}" alt="...">
+        <p align="center">最深的相爱</p>
+    </a>
+  </div>
+</div>
+<h5 align="center" style="color: blueviolet">Copyright &copy; 2013-2018.Company name All rights reserved. More server Jact <a href="" target="_blank" title="模板之家">小逗读书</a> - Collect from <a href="" title="网页模板" target="_blank">美文阅读</a></h5>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

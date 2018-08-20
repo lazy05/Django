@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ {% load static %}
+  <meta charset="UTF-8">
+  <title>登录</title>
+ </head>
+ <body>
+  <table border="0px;" width="700" align="center" cellpadding="10" cellspacing="0">
+	<form action="{% url 'login' %}" method="post">
+	{% csrf_token %}
+  <tr><td align="center">
+      <h2>欢迎光临小逗读书</h2>
+  </td></tr>
+  <tr><td align='center'>
+           用户名:<input type="text" name="uname"><br>
+  </td></tr>
+	<tr><td align="center">
+           密码:<input type="password" name="upass"><br>
+    </td></tr>
+     <tr><td align="center">
+         <img src="/user/code">
+         <input type="text" name='code1' placeholder="请输入验证码">
+     </td></tr>
+	<tr><td align="center">
+		 <input type="submit" value="登录">
+	</td></tr>
+	</form>
+      <tr><td align="center"><h3>{{ msg }}</h3></td></tr>
+  </table>>
+ </body>
+</html>
